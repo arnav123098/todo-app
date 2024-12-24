@@ -1,0 +1,278 @@
+* {
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+#main {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80vw;
+    max-width: 350px;
+    padding: 3rem;
+    background-color: rgb(255, 38, 38);
+    color: white;
+    border-radius: 5px;
+}
+
+h1 {
+    font-family: Poppins;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+hr {
+    border: solid .5px white;
+}
+
+#add-task-btn {
+    display: block;
+    margin: 3rem 0 0 auto;
+    height: 4rem;
+    width: 40%;
+    border: solid 2px white;
+    background-color: transparent;
+    color: white;
+    font-size: 1.5rem;
+    font-family: "Work Sans";
+    cursor: pointer;
+    transition-duration: .25s;
+}
+
+
+#add-task-btn:hover {
+    background-color: white;
+    color: rgb(255, 38, 38);
+    font-weight: bold;
+}
+
+#tabs {
+    display: flex;
+    margin: .5rem 0 2.5rem .75rem;
+}
+
+#tabs button {
+    height: 2.5rem;
+    padding-left: 0;
+    margin-right: .5rem;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    font-family: "Work Sans";
+    cursor: pointer;
+    transition-duration: .5s;
+}
+
+#tabs button:hover {
+    padding-left: .5rem;
+    background-color: white;
+    color: red;
+}
+
+#tabs button.opened-tab {
+    padding-left: .5rem;
+    background-color: white;
+    color: red;
+    margin-right: .75rem;
+}
+
+
+#my-tasks {
+    margin-left: -3.7rem;
+    list-style: none;
+    font-size: 2rem;
+    font-family: "Work Sans";
+}
+
+#my-tasks li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    height: 5rem;
+    line-height: 5rem;
+    vertical-align: middle;
+    padding-left: 1rem;
+    padding-right: 1.5rem;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+}
+
+.check-btn {
+    margin-right: .75rem;
+    margin-left: .25rem;
+    cursor: pointer;
+}
+
+.check-btn:checked {
+    appearance: none;
+    height: 1.3rem;
+    width: 1.3rem;
+    background-color: red;
+    border: solid 1px red;
+    border-radius: 10%;
+}
+
+.check-btn:checked::before {
+    content: '\2714';
+    color: white;
+    position: relative;
+    top: -.5rem;
+    left: 0;
+}
+
+.checked {
+    text-decoration: line-through;
+}
+
+.view-btn {
+    height: 2.5rem;
+    width: 5rem;
+    border: solid 1px white;
+    border-radius: 10%;
+    background-color: rgb(255, 38, 38);
+    color: white;
+    font-family: "Work Sans";
+    font-weight: bold;
+    cursor: pointer;
+    transition-duration: .25s;
+}
+
+.view-btn:hover {
+    border: solid 1px red;
+    background-color: transparent;
+    color: red;
+}
+
+#alert {
+    display: none;
+    width: 100%;
+    margin-top: -1.5rem;
+    font-family: "Work Sans";
+    font-size: 1.5rem;
+    background-color: white;
+    color: red;
+    padding-left: .75rem;
+}
+
+#add-task-menu {
+    display: none;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 60vh;
+    width: 80vw;
+    max-width: 350px;
+    padding: 4rem;
+    border-radius: 5px;
+    background-color: rgb(255, 38, 38);
+    color: white;
+}
+
+h2 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-family: "Work Sans";
+}
+
+#add-task-menu input {
+    height: 3rem;
+    width: 100%;
+    border: none;
+    border-bottom: solid 1px white;
+    background-color: transparent;
+    color: white;
+    font-size: 1.5rem;
+    padding-left: .5rem;
+    margin-bottom: 2rem;
+    transition-duration: .25s;
+}
+
+#add-task-menu input::placeholder {
+    color: white;
+}
+
+#add-task-menu input:focus {
+    outline: none;
+    transform: scale(1.02);
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator, 
+input[type="time"]::-webkit-calendar-picker-indicator  {
+   filter: invert(1);
+}
+
+#add-menu-btn-container {
+    position: absolute;
+    right: 4rem;
+    bottom: 3rem;
+}
+
+.add-menu-btn {
+    height: 3rem;
+    width: auto;
+    margin-right: .5rem;
+    font-size: 1.5rem;
+    border: solid 1px white;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    transition-duration: .25s;
+}
+
+.add-menu-btn:hover {
+    background-color: white;
+    color: red;
+}
+
+#submit {
+    cursor: pointer;
+}
+
+#footer {
+    position: fixed;
+    bottom: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    font-family: monospace;
+}
+
+#footer a {
+    color: red;
+}
+
+#footer a:hover {
+    color: white;
+    background-color: red;
+}
+
+@media (max-width: 350px) {
+    html {
+        font-size: 55%;
+    }
+
+    #my-tasks li {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+
+    .view-btn {
+        height: 3rem;
+        width: 4rem;
+        font-size: 1rem;
+    }
+
+    #footer {
+        font-size: 1.5rem;
+    }
+}
