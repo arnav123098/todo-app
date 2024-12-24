@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo - Built With JS</title>
+    <link href='./style.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+  </head> 
+  <body>
+    <div id="add-task-menu">
+      <h2 id="name-h2">Task Name</h2>  
+      <input type="text" placeholder="Task name (required)" id="name-input">
+      <p id="alert">Please enter a task name to continue</p>
+      <h2 id="date-h2">Date (optional)</h2>
+      <input type="date" id="date-input">
+      <h2 id="time-h2">Time (optional)</h2>
+      <input type="time" id="time-input">
+        <div id="add-menu-btn-container">
+            <button id="close-add-menu" class="add-menu-btn">Cancel</button>
+            <button id="submit" class="add-menu-btn">Add Task</button>
+        </div>
+    </div>
+    <div id="main">
+      <h1>Tasks</h1>
+        <hr>
+        <div id="tabs">
+          <button id="all" class="opened-tab">All</button>
+          <button id="pending">Pending</button>
+          <button id="completed">Completed</button>
+        </div>
+        <ul id="my-tasks"></ul>
+        <button id="add-task-btn">Add Task</button>
+    </div>
+    <div id="footer">
+      - made by <a target="_blank" href="https://github.com/arnav123098">@Arnav123098</a> ⚡
+    </div>
+    <script defer type="text/javascript" src=".\main.js"></script>
+  </body>
+</html>
