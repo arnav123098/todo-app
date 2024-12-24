@@ -9,3 +9,4 @@
 - sorts tasks based on date and time
 - responsive
 
+!(preview img)[./preview.jpg]
